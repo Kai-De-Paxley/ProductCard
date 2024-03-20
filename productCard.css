@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    background: linear-gradient( 145deg, rgb(255, 251, 0), rgba(255, 0, 0, 0.596));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    max-width: 325px;
+    padding: 20px 30px 30px 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(255, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.container .image-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    height: 200px;
+}
+
+.container .image-box img {
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    left: 50%;
+    right: 10px;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.container .image-box img.active{
+    opacity: 1;
+}
+
+.container .name-product h2{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.container .name-product p {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+
+.container .colors-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.container .colors-price .color {
+    display: flex;
+    align-items: center;
+}
+
+.colors-price .color .colors {
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.colors-price .color .circle {
+    display: flex;
+}
+
+.color .circle .circles {
+    height: 18px;
+    width: 18px;
+    background-color: olive;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 4px;
+}
+
+.color .circle .circles.olive.active {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px olive;
+}
+
+.color .circle .circles.pink {
+    background-color: pink;
+}
+
+.color .circle .circles.pink.active {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px pink;
+}
+
+.color .circle .circles.blue {
+    background-color: blue;
+}
+
+.color .circle .circles.blue.active {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px blue;
+}
+
+.color .circle .circles.green {
+    background-color: green;
+}
+
+.color .circle .circles.green.active {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px green;
+}
+
+.colors-price .price span {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.container button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto 0px;
+    outline: none;
+    padding: 10px 25px;
+    font-size: 15px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-color: blueviolet;
+    color: white;
+}
+
+
+
